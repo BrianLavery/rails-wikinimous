@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-sm-8 mx-auto">
+      <% @articles.each do |article| %>
+      <div class="article-card">
+          <%= link_to article.title, article_path(article), class: "article-title-index" %>
+          <p><%= article.content %></p>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>

@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RailsWikinimous</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>RailsWikinimous</title>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/31aab5d7d8.js" crossorigin="anonymous"></script>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="navbar d-flex justify-space-between">
+      <%= link_to "Wikinomous", articles_path%>
+      <%= link_to "New article", new_article_path%>
+    </div>
     <%= yield %>
-  </body>
+  </div>
+</body>
 </html>
